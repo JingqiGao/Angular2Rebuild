@@ -1,0 +1,17 @@
+<div class="page-header">    
+    <h2>Migration Auto Runner<small>(beta)</small></h2>
+</div>
+<div class="grid">
+    <div class="col">
+        <form>
+            <div class="form-group">
+                <div class="form1">
+                    <label for="name">Load connection from saved</label>
+                    <select class="form-control">
+                        <option *ngFor="let c of conectionInfoList" [value]="c.profileName">{{c.profileName}}</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

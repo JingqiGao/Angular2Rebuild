@@ -3,13 +3,15 @@ import {IDbConnection, IDatabase} from '../interface/IDbConnection';
 import {IFileStatus, Status} from '../interface/IFileStatus';
 import {IConnectionProfile} from '../interface/IConnectionProfile';
 import {IConnectionProfileDetail} from '../interface/IConnectionProfileDetail';
+import {MigrationService} from '../services/migration.Service';
+
 
 @Component({
   selector: 'my-app',
   templateUrl: './app/components/client.component.html'
 })
 export class ClientComponent {
-    selectedConnInfoStr: String;
+    selectedConnInfoStr: String = "Test";
     selectedConnInfo: IConnectionProfile = {profileName: '', _id: 0};
     conectionInfoList: IConnectionProfile[] = [];
 
@@ -21,7 +23,7 @@ export class ClientComponent {
 
 	//connect with select profile
 	// tslint:disable-next-line:indent
-	//connectWithSelected(){
+	connectWithSelected(){
 		// let self = this;
 		// this.service.GetConnectionDetailsById(self.selectedConnInfo._id).then(
 		// 			data=>{
@@ -41,9 +43,9 @@ export class ClientComponent {
 						
 		// 			});					
 								
-	//}
+	}
 
-	//deleteSelected(){
+	deleteSelected(){
 		// let self = this;
 		// this.service.deleteConnectionInfoByName(this.selectedConnInfo.profileName)
 		// 	.then(
@@ -63,6 +65,6 @@ export class ClientComponent {
 		// 		});
 		// 	}
 		// 	);
-	//}
+	}
 
 }

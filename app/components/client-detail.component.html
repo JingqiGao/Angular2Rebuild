@@ -1,0 +1,11 @@
+<div *ngIf="connInfo">
+    <div>
+        <label>Id:</label>
+        {{connInfo.id}} 
+    </div>
+    <div>
+        <label>Name:</label>
+        <input [(ngModel)]="connInfo.profileName" placeholder="profileName"/>
+    </div>
+   
+</div>
